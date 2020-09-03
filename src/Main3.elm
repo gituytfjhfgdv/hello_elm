@@ -74,7 +74,7 @@ viewInput t p v toMsg =
 
 viewValidation : Model -> Html msg
 viewValidation model =
-    if model.password == model.passwordAgain then
+    if model.password == model.passwordAgain && String.length model.password >= 8 && String.length model.passwordAgain >= 8 then
         div [ style "color" "green" ] [ text "OK" ]
 
     else
