@@ -1,59 +1,28 @@
-module Main exposing (..)
+module Main exposing (main)
 
-import Browser
-import Html exposing (Html, button, div, text)
-import Html.Events exposing (onClick)
+import Html exposing (Html, a, div, h1, li, text, ul)
+import Html.Attributes exposing (href, target)
 
 
+main : Html msg
 main =
-    Browser.sandbox { init = init, update = update, view = view }
+    div [] [ header, content ]
 
 
-
--- MODEL
-
-
-type alias Model =
-    Int
+header : Html msg
+header =
+    h1 [] [ text "Useful Links" ]
 
 
-init : Model
-init =
-    0
-
-
-
--- UPDATE
-
-
-type Msg
-    = Increment
-    | Decrement
-    | Reset
-
-
-update : Msg -> Model -> Model
-update msg model =
-    case msg of
-        Increment ->
-            model + 1
-
-        Decrement ->
-            model - 1
-
-        Reset ->
-            0
-
-
-
--- VIEW
-
-
-view : Model -> Html Msg
-view model =
-    div []
-        [ button [ onClick Decrement ] [ text "-" ]
-        , div [] [ text (String.fromInt model) ]
-        , button [ onClick Increment ] [ text "+" ]
-        , button [ onClick Reset ] [ text "リセットする" ]
+content : Html msg
+content =
+    ul []
+        [ linkItem "https://elm-lang.org" "homepage"
+        , linkItem "https://elm-lang.org" "Elm"
+        , linkItem "https://elm-lang.org" "Elm"
         ]
+
+
+linkItem : String -> String -> Html msg
+linkItem url text_ =
+    li [] [ a [ href url, target "_blank" ] [ text text_ ] ]

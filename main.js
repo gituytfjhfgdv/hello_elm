@@ -4423,7 +4423,7 @@ var $elm$html$Html$li = _VirtualDom_node('li');
 var $elm$html$Html$Attributes$target = $elm$html$Html$Attributes$stringProperty('target');
 var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
 var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
-var $author$project$Main4$linkItem = F2(
+var $author$project$Main$linkItem = F2(
 	function (url, text_) {
 		return A2(
 			$elm$html$Html$li,
@@ -4444,27 +4444,27 @@ var $author$project$Main4$linkItem = F2(
 				]));
 	});
 var $elm$html$Html$ul = _VirtualDom_node('ul');
-var $author$project$Main4$content = A2(
+var $author$project$Main$content = A2(
 	$elm$html$Html$ul,
 	_List_Nil,
 	_List_fromArray(
 		[
-			A2($author$project$Main4$linkItem, 'https://elm-lang.org', 'homepage'),
-			A2($author$project$Main4$linkItem, 'https://elm-lang.org', 'Elm'),
-			A2($author$project$Main4$linkItem, 'https://elm-lang.org', 'Elm')
+			A2($author$project$Main$linkItem, 'https://elm-lang.org', 'homepage'),
+			A2($author$project$Main$linkItem, 'https://elm-lang.org', 'Elm'),
+			A2($author$project$Main$linkItem, 'https://elm-lang.org', 'Elm')
 		]));
 var $elm$html$Html$div = _VirtualDom_node('div');
 var $elm$html$Html$h1 = _VirtualDom_node('h1');
-var $author$project$Main4$header = A2(
+var $author$project$Main$header = A2(
 	$elm$html$Html$h1,
 	_List_Nil,
 	_List_fromArray(
 		[
 			$elm$html$Html$text('Useful Links')
 		]));
-var $author$project$Main4$main = A2(
+var $author$project$Main$main = A2(
 	$elm$html$Html$div,
 	_List_Nil,
 	_List_fromArray(
-		[$author$project$Main4$header, $author$project$Main4$content]));
-_Platform_export({'Main4':{'init':_VirtualDom_init($author$project$Main4$main)(0)(0)}});}(this));
+		[$author$project$Main$header, $author$project$Main$content]));
+_Platform_export({'Main':{'init':_VirtualDom_init($author$project$Main$main)(0)(0)}});}(this));
